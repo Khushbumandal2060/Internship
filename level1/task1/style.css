@@ -50,3 +50,10 @@ nav li a:hover {
     background-size:cover;
     background-position: center;
 }
+footer {
+    background: #012733;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+}
