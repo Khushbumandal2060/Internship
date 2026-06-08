@@ -4,13 +4,17 @@
     box-sizing: border-box;
 }
 
+/* Navbar */
 nav {
     width: 100%;
     height: 75px;
     line-height: 75px;
-    padding: 0px 100px;
+    padding: 0 100px;
     position: fixed;
+    top: 0;
+    left: 0;
     background: linear-gradient(#033747, #012733);
+    z-index: 1000;
 }
 
 nav .logo {
@@ -35,25 +39,88 @@ nav li {
 nav li a {
     font-size: 18px;
     text-transform: uppercase;
-    padding: 0px 30px;
+    padding: 0 20px;
     color: white;
     text-decoration: none;
 }
 
 nav li a:hover {
     color: #ff8c69;
-    transition: all 0.4s ease 0s;
+    transition: 0.3s;
 }
-.content-items img{
-    width:100%;
-    height:100vh;
-    background-size:cover;
-    background-position: center;
+
+/* Home Page Image */
+.content-items {
+    margin-top: 75px;
 }
+
+.content-items img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    display: block;
+}
+
+/* About Page */
+.about {
+    padding-top: 120px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+.about h1 {
+    margin-bottom: 20px;
+    color: #012733;
+    font-size: 36px;
+}
+
+.about p {
+    max-width: 700px;
+    margin: 10px auto;
+    line-height: 1.6;
+    color: #333;
+    font-size: 18px;
+}
+
+/* Footer */
 footer {
     background: #012733;
     color: white;
     text-align: center;
     padding: 20px;
     font-size: 16px;
+    margin-top: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        padding: 0 20px;
+    }
+
+    nav .logo {
+        font-size: 22px;
+    }
+
+    nav li a {
+        font-size: 14px;
+        padding: 0 8px;
+    }
+
+    .content-items img {
+        height: auto;
+    }
+
+    .about h1 {
+        font-size: 28px;
+    }
+
+    .about p {
+        font-size: 16px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
 }
