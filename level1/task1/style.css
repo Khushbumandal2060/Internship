@@ -7,7 +7,7 @@
 /* Navbar */
 nav {
     width: 100%;
-    height: 75px;
+    height: 60px;
     line-height: 75px;
     padding: 0 100px;
     position: fixed;
@@ -49,11 +49,7 @@ nav li a:hover {
     transition: 0.3s;
 }
 
-/* Home Page Image */
-.content-items {
-    margin-top: 75px;
-}
-
+/* HOME IMAGE */
 .content-items img {
     width: 100%;
     height: 100vh;
@@ -61,11 +57,9 @@ nav li a:hover {
     display: block;
 }
 
-/* About Page */
+/* ABOUT */
 .about {
-    padding-top: 120px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 120px 20px;
     text-align: center;
 }
 
@@ -76,24 +70,83 @@ nav li a:hover {
 }
 
 .about p {
-    max-width: 700px;
+    max-width: 750px;
     margin: 10px auto;
-    line-height: 1.6;
+    line-height: 1.7;
     color: #333;
     font-size: 18px;
 }
 
-/* Footer */
+/* CONTACT */
+.contact {
+    padding: 120px 20px 50px;
+    text-align: center;
+}
+
+.contact h1 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #012733;
+}
+
+.contact-container {
+    max-width: 500px;
+    margin: auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #033747;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    background: #012733;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #033747;
+}
+
+/* FOOTER */
 footer {
     background: #012733;
     color: white;
     text-align: center;
     padding: 20px;
-    font-size: 16px;
     margin-top: 30px;
 }
 
-/* Responsive Design */
+/* RESPONSIVE */
 @media (max-width: 768px) {
     nav {
         padding: 0 20px;
@@ -103,13 +156,12 @@ footer {
         font-size: 22px;
     }
 
-    nav li a {
-        font-size: 14px;
-        padding: 0 8px;
+    nav ul {
+        gap: 15px;
     }
 
-    .content-items img {
-        height: auto;
+    nav li a {
+        font-size: 14px;
     }
 
     .about h1 {
@@ -118,9 +170,5 @@ footer {
 
     .about p {
         font-size: 16px;
-    }
-
-    footer {
-        font-size: 14px;
     }
 }
