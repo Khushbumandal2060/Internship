@@ -1,64 +1,171 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: Arial, sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
 }
 
-body{
-    background:#f4f4f4;
-    color:#333;
+body {
+    background: linear-gradient(135deg, #0b1020, #1a1f3c);
+    color: #e5e7eb;
 }
 
-header{
-    background:#0077cc;
-    color:white;
-    padding:20px;
-    text-align:center;
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:0 15px;
-    font-weight:bold;
+header h1 {
+    color: #a78bfa;
+    font-size: 2rem;
+    text-shadow: 0 0 10px rgba(167, 139, 250, 0.5);
 }
 
-.section{
-    padding:50px 20px;
-    text-align:center;
+nav a {
+    text-decoration: none;
+    color: #e5e7eb;
+    margin-left: 25px;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
-.card{
-    background:white;
-    width:300px;
-    margin:20px auto;
-    padding:20px;
-    border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,0.2);
-
-    animation: fadeIn 2s ease;
-    transition: transform 0.3s;
+nav a:hover {
+    color: #22d3ee;
 }
 
-.card:hover{
-    transform:scale(1.05);
+/* Sections */
+.section {
+    min-height: auto;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: fadeIn 1.2s ease;
 }
 
-footer{
-    background:#222;
-    color:white;
-    text-align:center;
-    padding:15px;
+/* Section Heading */
+.section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 18px;
+    color: #22d3ee;
+    position: relative;
 }
 
-@keyframes fadeIn{
-    from{
-        opacity:0;
-        transform:translateY(20px);
+/* Underline effect */
+.section h2::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: #22d3ee;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 5px;
+}
+
+/* Paragraph */
+.section p {
+    max-width: 700px;
+    font-size: 1rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+/* Projects container */
+.projects {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+/* Cards */
+.card {
+    width: 300px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    transition: 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(34, 211, 238, 0.25);
+    border-color: #22d3ee;
+}
+
+.card h3 {
+    color: #a78bfa;
+    margin-bottom: 15px;
+}
+
+/* Button */
+.btn {
+    margin-top: 25px;
+    padding: 12px 28px;
+    background: linear-gradient(135deg, #a78bfa, #22d3ee);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(34, 211, 238, 0.3);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.06);
+    color: #cbd5e1;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
     }
-    to{
-        opacity:1;
-        transform:translateY(0);
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav a {
+        margin: 10px;
+        display: inline-block;
+    }
+
+    .section h2 {
+        font-size: 2rem;
+    }
+
+    .card {
+        width: 90%;
     }
 }
