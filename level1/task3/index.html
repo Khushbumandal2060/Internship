@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive UI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Interactive Web Page</h1>
+
+    <!-- Dropdown -->
+    <div class="card">
+        <h2>Dropdown</h2>
+
+        <select id="courseSelect">
+            <option value="">Choose Course</option>
+            <option value="web">Web Development</option>
+            <option value="ai">AI</option>
+            <option value="design">UI/UX</option>
+        </select>
+
+        <p id="result"></p>
+    </div>
+
+    <!-- Modal Button -->
+    <div class="card">
+        <h2>Modal</h2>
+        <button onclick="openModal()" class="btn">Open Modal</button>
+    </div>
+
+    <!-- Form -->
+    <div class="card">
+        <h2>Contact Form</h2>
+
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name">
+            <input type="email" id="email" placeholder="Your Email">
+            <button type="submit" class="btn">Submit</button>
+        </form>
+
+        <p id="error"></p>
+    </div>
+
+</div>
+
+<!-- Modal -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span onclick="closeModal()" class="close">&times;</span>
+        <h2>Hello 👋</h2>
+        <p>This is a modern modal box</p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
