@@ -1,0 +1,164 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: radial-gradient(circle at top, #111827, #0b1020);
+    color: #e5e7eb;
+    min-height: 100vh;
+}
+
+/* MAIN LAYOUT CENTER FIX */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    align-items: start;
+}
+
+/* TITLE full width */
+.container h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 2.5rem;
+    color: #a78bfa;
+    margin-bottom: 20px;
+}
+
+/* CARD FIX */
+.card {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 18px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: #22d3ee;
+    box-shadow: 0 10px 25px rgba(34, 211, 238, 0.15);
+}
+
+/* headings */
+.card h2 {
+    color: #22d3ee;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+/* inputs */
+select,
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.08);
+    color: #e5e7eb;
+
+    font-size: 14px;
+}
+
+/* button */
+.btn {
+    margin-top: 15px;
+    padding: 12px;
+    background: linear-gradient(135deg, #a78bfa, #22d3ee);
+    border: none;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* text */
+p {
+    margin-top: 10px;
+    text-align: center;
+    color: #cbd5e1;
+}
+
+/* ERROR */
+#error {
+    color: #f87171;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* MODAL FIX (CENTER PERFECTLY) */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #111827;
+    padding: 25px;
+    border-radius: 15px;
+    width: 320px;
+    text-align: center;
+    border: 1px solid #22d3ee;
+
+    animation: pop 0.3s ease;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 22px;
+    color: #22d3ee;
+}
+
+/* animation */
+@keyframes pop {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    #courseSelect {
+        color: #94a3b8;
+        /* default (not selected) */
+    }
+
+    #courseSelect.selected {
+        color: #22d3ee;
+        /* after selection */
+    }
+}
