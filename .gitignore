@@ -5,8 +5,9 @@ level3/task1/frontend/node_modules
 
 level3/task2/auth-system/backend/node_modules
 level3/task2/auth-system/frontend/node_modules
-level3/task1/backend/.env
-level3/task1/backend/.env.example
+level3/task1/task-manager-app/backend/.env
+level3/task1/task-manager-app/backend/.env.example
+level3/task1/task-manager-app/frontend/.env.example
 level3/task2/auth-system/backend/.env
 level3/task2/auth-system/backend/.env.example
 level3/task2/auth-system/frontend/.env.example
