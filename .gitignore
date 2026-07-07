@@ -1,11 +1,14 @@
 level3/task1/backend/node_modules
+level3/task1/backend/public
 level3/task1/frontend/public
 level3/task1/frontend/node_modules
-level3/task1/backend/public
+
 level3/task2/auth-system/backend/node_modules
+level3/task2/auth-system/frontend/node_modules
 level3/task1/backend/.env
 level3/task1/backend/.env.example
 level3/task2/auth-system/backend/.env
 level3/task2/auth-system/backend/.env.example
 level3/task2/auth-system/frontend/.env.example
 level3/task2/auth-system/frontend/vite.config.js
+level3/task2/auth-system/frontend/public
