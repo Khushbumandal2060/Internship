@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap");
+
+:root {
+  --paper: #f4f2ec;
+  --paper-line: #d8d3c4;
+  --ink: #1c1b17;
+  --ink-soft: #55534a;
+  --stamp-green: #2f5233;
+  --stamp-green-soft: #e4ebe1;
+  --stamp-gold: #a9791f;
+  --stamp-gold-soft: #f3e9d2;
+  --stamp-clay: #a1462f;
+  --stamp-clay-soft: #f3ded6;
+  --card-bg: #fbfaf6;
+
+  --font-display: "Fraunces", serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--paper);
+  background-image: linear-gradient(var(--paper-line) 1px, transparent 1px);
+  background-size: 100% 2.1rem;
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input, textarea, select {
+  font-family: inherit;
+}
+
+::selection {
+  background: var(--stamp-green);
+  color: var(--paper);
+}
