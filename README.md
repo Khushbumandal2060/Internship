@@ -1,2 +1,2 @@
 # Internship
-Web Development Intern at Codveda Technologies!!
+Web Development Intern
