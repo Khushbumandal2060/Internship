@@ -54,7 +54,7 @@ export default function App() {
   if (checkingSession) {
     return (
       <div className="page page--center">
-        <p className="page__loading">Checking your session…</p>
+        <p className="page__loading">Checking your sessions…</p>
       </div>
     );
   }
